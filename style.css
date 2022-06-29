@@ -1,0 +1,65 @@
+@import "reset.css";
+body{
+    background-color: #F6F9FC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex; /*display: flex는 정렬할려고 하는 요소들의 부모 요소에 선언한다. 부모 요소의 정렬 속성을 같이 병기한다*/
+    flex-direction: column; /*display: flex;가 걸려있는 요소에만 적용가능. flex-direction은 나열 방향 속성으로 column은 요소들을 위에서 아래로 정렬한다*/
+    align-items: center; /*align-items는 세로정렬 속성으로 center는 요소들을 컨테이너의 세로선 상의 가운데로 정렬한다.*/
+    padding: 50px 0px; /*padding: 윗 공간, 양옆 공간 버튼의 크기를 늘린다.*/
+}
+
+.canvas{
+    width:700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 15px;/*테두리를 둥글게 만들어 준다*/
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.controls{
+    margin-top:80px; /*margin은 css요소의 네 방향 바깥 여백 영역을 설정한다. margin-top은 윗 요소와의 여백 영역을 설정한다.*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .controls_btns{
+    margin-bottom: 30px;
+}
+
+.controls_btns button{
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.controls_btns button:active{
+    transform:scale(0.98);
+}/*active는 마우스로 요소를 클릭하고 있는 동안 동작하게 할 수 있는 선택자, transform은 요소의 움직임, 크기 변화 등의 애니메이션 효과를 준다.
+scale(x, y)는 x축으로 x배, y 축으로 y배 확대 또는 축소한다*/
+
+.controls .controls_colors{
+    display: flex;
+}
+
+.controls_colors .controls_color {
+    width: 50px;
+    height:50px;
+    border-radius: 25px; /*색깔 모형을 원형으로 만들려면 width의 반만큼 border-radius를 가지면 된다.*/
+    cursor: pointer; /*마우스 커서를 갖다대면 커서 모양이 바뀐다.*/
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.controls .controls_range{
+    margin-bottom: 30px;
+}
